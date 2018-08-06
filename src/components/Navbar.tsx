@@ -249,7 +249,9 @@ class Navbar extends React.Component {
         mode={breakpoint === 'desktop' ? 'horizontal' : 'inline'}
         style={{
           float: breakpoint === 'desktop' ? 'right' : 'none',
-          lineHeight: '64px'
+          lineHeight: '64px',
+          position: 'relative',
+          'z-index': '2'
         }}
         onClick={this.handleClick}
         selectedKeys={[this.state.current]}
