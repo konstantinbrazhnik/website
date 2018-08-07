@@ -8,27 +8,20 @@ import { HeroText } from '@src/Styles';
 
 export const HeroArt = styled.div`
   text-align: center;
-  margin-top: -50px;
   img {
     width: 60%;
-    
+
+    @media ${device.mobileL} and (max-width: ${size.laptopM}) {
+      width: 90%;
+    }
+
     @media ${device.desktopS} {
       width: 50%;
     }
   }
-  
+
   @media ${device.mobileS} and (max-width: 767px) {
     z-index: -1;
-  }
-  
-  @media ${device.mobileL} and (max-width: ${size.tablet}) {
-    opacity: 0.4
-    margin-top: -80px;
-    
-    img {
-      width: 30%;
-      margin-top: -30%;
-    }
   }
 `;
 
