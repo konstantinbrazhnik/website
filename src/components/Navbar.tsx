@@ -317,7 +317,7 @@ class Navbar extends React.Component {
 
   render(): JSX.Element {
     return (
-      <Affix>
+      <Affix style={{ position: 'relative', zIndex: '2' }}>
         <HeaderWrapper>
           <Header>
             <Logo>
