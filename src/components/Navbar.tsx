@@ -253,9 +253,7 @@ class Navbar extends React.Component {
         mode={breakpoint === 'desktop' ? 'horizontal' : 'inline'}
         style={{
           float: breakpoint === 'desktop' ? 'right' : 'none',
-          lineHeight: '64px',
-          position: 'relative',
-          'z-index': '2'
+          lineHeight: '64px'
         }}
         onClick={this.handleClick}
         selectedKeys={[this.state.current]}
@@ -319,7 +317,7 @@ class Navbar extends React.Component {
 
   render(): JSX.Element {
     return (
-      <Affix>
+      <Affix style={{ position: 'relative', zIndex: '2' }}>
         <HeaderWrapper>
           <Header>
             <Logo>
