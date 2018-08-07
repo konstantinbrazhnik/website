@@ -95,6 +95,10 @@ const HeaderWrapper = styled.div`
   background-color: rgb(24, 30, 38);
   z-index: 9999;
   overflow: hidden;
+  .ant-menu {
+    background: transparent;
+    border-bottom: none;
+  }
   @media (max-width: ${size.mobileL}) {
     .ant-layout-header {
       padding-left: 30px;
@@ -249,9 +253,7 @@ class Navbar extends React.Component {
         mode={breakpoint === 'desktop' ? 'horizontal' : 'inline'}
         style={{
           float: breakpoint === 'desktop' ? 'right' : 'none',
-          lineHeight: '64px',
-          position: 'relative',
-          'z-index': '2'
+          lineHeight: '64px'
         }}
         onClick={this.handleClick}
         selectedKeys={[this.state.current]}
@@ -315,7 +317,7 @@ class Navbar extends React.Component {
 
   render(): JSX.Element {
     return (
-      <Affix>
+      <Affix style={{ position: 'relative', zIndex: '2' }}>
         <HeaderWrapper>
           <Header>
             <Logo>
